@@ -19,17 +19,21 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
+          hover: "hsl(var(--secondary-hover))",
         },
-        destructive: {
-          DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))",
+        outline: {
+          DEFAULT: "hsl(var(--outline))",
+          foreground: "hsl(var(--outline-foreground))",
+          hover: "hsl(var(--outline-hover))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -39,24 +43,47 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
-        popover: {
-          DEFAULT: "hsl(var(--popover))",
-          foreground: "hsl(var(--popover-foreground))",
-        },
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
         },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        
+        // Brand-specific colors
+        "nissan-red": "hsl(var(--nissan-red))",
+        "nissan-red-dark": "hsl(var(--nissan-red-dark))",
+        "dealership-black": "hsl(var(--dealership-black))",
+        "dealership-gray": "hsl(var(--dealership-gray))",
+        "light-surface": "hsl(var(--light-surface))",
+      },
+      fontFamily: {
+        heading: ["var(--font-heading)"],
+        body: ["var(--font-body)"],
+      },
+      spacing: {
+        "section": "var(--space-section)",
+        "component": "var(--space-component)",
+        "element": "var(--space-element)",
+      },
+      boxShadow: {
+        "card": "var(--shadow-card)",
+        "button": "var(--shadow-button)",
+        "modal": "var(--shadow-modal)",
+      },
+      transitionDuration: {
+        "base": "var(--transition-base)",
+        "button": "var(--transition-button)",
       },
       borderRadius: {
         lg: "var(--radius)",

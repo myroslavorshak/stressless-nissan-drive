@@ -1,0 +1,90 @@
+[
+  {
+    "id": "vin-001",
+    "year": "2024",
+    "model": "Altima",
+    "trim": "2.5 SV",
+    "stock": "N240001",
+    "vin": "1N4BL4BV9RN******",
+    "color": "Pearl White",
+    "highlights": ["CVT Transmission", "Safety Shield 2.0", "Remote Start"],
+    "available": true
+  },
+  {
+    "id": "vin-002", 
+    "year": "2024",
+    "model": "Sentra",
+    "trim": "SV",
+    "stock": "N240002",
+    "vin": "3N1CB8BV4PL******",
+    "color": "Gun Metallic",
+    "highlights": ["CVT Transmission", "8-inch Display", "Intelligent Key"],
+    "available": true
+  },
+  {
+    "id": "vin-003",
+    "year": "2024", 
+    "model": "Rogue",
+    "trim": "S AWD",
+    "stock": "N240003",
+    "vin": "5N1AT3CA9RC******",
+    "color": "Magnetic Black",
+    "highlights": ["AWD", "Safety Shield 2.0", "Apple CarPlay"],
+    "available": true
+  },
+  {
+    "id": "vin-004",
+    "year": "2024",
+    "model": "Murano", 
+    "trim": "S AWD",
+    "stock": "N240004",
+    "vin": "5N1AZ2MH9RN******",
+    "color": "Sunset Drift",
+    "highlights": ["AWD", "V6 Engine", "Leather-Appointed Seating"],
+    "available": true
+  },
+  {
+    "id": "vin-005",
+    "year": "2024",
+    "model": "Pathfinder",
+    "trim": "S",
+    "stock": "N240005", 
+    "vin": "5N1DR3BA9RC******",
+    "color": "Boulder Gray",
+    "highlights": ["3-Row Seating", "9-Speed CVT", "Tri-Zone Climate"],
+    "available": true
+  },
+  {
+    "id": "vin-006",
+    "year": "2024",
+    "model": "Frontier",
+    "trim": "S Crew Cab",
+    "stock": "N240006",
+    "vin": "1N6ED1CK9RN******", 
+    "color": "Gun Metallic",
+    "highlights": ["Crew Cab", "V6 Engine", "Tow Package"],
+    "available": true
+  },
+  {
+    "id": "vin-007",
+    "year": "2024",
+    "model": "Kicks",
+    "trim": "S",
+    "stock": "N240007",
+    "vin": "3N1CP5CU9RL******",
+    "color": "Fresh Powder",
+    "highlights": ["CVT Transmission", "Intelligent Key", "7-inch Display"],
+    "available": true
+  },
+  {
+    "id": "vin-008",
+    "year": "2024", 
+    "model": "Versa",
+    "trim": "S",
+    "stock": "N240008",
+    "vin": "3N1CN8EV4RL******",
+    "color": "Brilliant Silver",
+    "highlights": ["CVT Transmission", "Nissan Safety Shield", "Bluetooth"],
+    "available": true
+  }
+]
