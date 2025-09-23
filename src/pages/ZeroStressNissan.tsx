@@ -10,6 +10,9 @@ import nissanAltimaGray from "@/assets/nissan-altima-gray.jpg";
 import nissanRogueBlue from "@/assets/nissan-rogue-blue.jpg";
 import nissanMuranoBlack from "@/assets/nissan-murano-black.jpg";
 import nissanMaximaRed from "@/assets/nissan-maxima-red.jpg";
+import stepReserveVin from "@/assets/step-reserve-vin.jpg";
+import stepSignAndDrive from "@/assets/step-sign-and-drive.jpg";
+import stepZeroStressOwnership from "@/assets/step-zero-stress-ownership.jpg";
 
 interface VehicleData {
   id: string;
@@ -114,17 +117,20 @@ const ZeroStressNissan = () => {
     {
       number: "01",
       title: "Reserve your VIN",
-      description: "We confirm by text/call"
+      description: "We confirm by text/call",
+      image: stepReserveVin
     },
     {
       number: "02", 
       title: "60-Minute Sign-and-Drive",
-      description: "We prep paperwork; you sign and go"
+      description: "We prep paperwork; you sign and go",
+      image: stepSignAndDrive
     },
     {
       number: "03",
       title: "Enjoy zero-stress ownership",
-      description: "Maintenance, washes, VIP loaner, DMV handled"
+      description: "Maintenance, washes, VIP loaner, DMV handled",
+      image: stepZeroStressOwnership
     }
   ];
 
@@ -272,17 +278,26 @@ const ZeroStressNissan = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.number}
+              <div key={index} className="text-center space-y-6">
+                <div className="relative">
+                  <img 
+                    src={step.image} 
+                    alt={step.title}
+                    className="w-full h-48 object-cover rounded-lg dealership-shadow mb-4"
+                  />
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold dealership-shadow">
+                    {step.number}
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
-                {index === 1 && (
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Clock starts at check-in when VIN selected; stops at signed buyer's order
-                  </p>
-                )}
+                <div className="pt-4">
+                  <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                  <p className="text-muted-foreground">{step.description}</p>
+                  {index === 1 && (
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Clock starts at check-in when VIN selected; stops at signed buyer's order
+                    </p>
+                  )}
+                </div>
               </div>
             ))}
           </div>
