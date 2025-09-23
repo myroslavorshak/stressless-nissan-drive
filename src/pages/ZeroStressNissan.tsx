@@ -459,16 +459,16 @@ const ZeroStressNissan = () => {
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
           <Card className="w-full max-w-md">
             <CardContent className="p-6">
-              <h3 className="text-xl font-bold mb-4">Reserve Your VIN</h3>
+              <h3 className="text-xl font-bold mb-4">Reserve Your Bundle</h3>
               <p className="text-muted-foreground mb-4">
-                {selectedVin ? `Stock #${selectedVin} selected` : 'Choose your preferred vehicle'}
+                Secure your Zero-Stress Nissan Bundle - only {bundlesLeft} left!
               </p>
               <div className="flex justify-end space-x-2">
                 <Button variant="ghost" onClick={() => setShowLeadForm(false)}>
                   Cancel
                 </Button>
                 <Button variant="dealership">
-                  Submit
+                  Reserve Bundle
                 </Button>
               </div>
             </CardContent>
