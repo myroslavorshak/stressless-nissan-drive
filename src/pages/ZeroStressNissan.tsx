@@ -161,8 +161,8 @@ const ZeroStressNissan = () => {
                 <span className="hidden sm:inline">Text Us</span>
               </a>
             </Button>
-            <Button variant="cta" size="sm" onClick={() => openLeadForm('Header CTA')}>
-              Reserve Your VIN
+            <Button variant="cta" size="sm" onClick={() => openLeadForm('Header - Book My Appointment')}>
+              Book My Appointment
             </Button>
           </div>
         </div>
