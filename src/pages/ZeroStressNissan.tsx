@@ -327,14 +327,22 @@ const ZeroStressNissan = () => {
       {/* CTA Section */}
       <section className="py-component">
         <div className="container mx-auto px-4">
-          <div className="text-center">
+          <div className="text-center space-y-6">
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-2xl lg:text-3xl font-bold mb-4">
+                Don't Miss This Limited-Time Opportunity
+              </h3>
+              <p className="text-lg text-muted-foreground mb-6">
+                This exclusive Zero-Stress Bundle combines everything you need for worry-free ownership. 
+                With only {bundlesLeft} bundles remaining, this unique offer won't last long.
+              </p>
+            </div>
             <Button 
               variant="cta" 
               size="xl" 
               onClick={() => openLeadForm('CTA - Reserve My Bundle Now')}
-              className="animate-pulse"
             >
-              RESERVE MY BUNDLE NOW
+              SECURE MY BUNDLE NOW
             </Button>
           </div>
         </div>
