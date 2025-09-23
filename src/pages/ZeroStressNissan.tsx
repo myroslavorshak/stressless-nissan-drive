@@ -454,21 +454,86 @@ const ZeroStressNissan = () => {
         </Button>
       </div>
 
-      {/* Lead Form Modal - Placeholder */}
+      {/* Lead Form Modal */}
       {showLeadForm && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-md">
+          <Card className="w-full max-w-lg">
             <CardContent className="p-6">
               <h3 className="text-xl font-bold mb-4">Reserve Your Bundle</h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-6">
                 Secure your Zero-Stress Nissan Bundle - only {bundlesLeft} left!
               </p>
-              <div className="flex justify-end space-x-2">
+              
+              <form className="space-y-4">
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-1">First Name</label>
+                    <input 
+                      type="text" 
+                      className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                      required 
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Last Name</label>
+                    <input 
+                      type="text" 
+                      className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                      required 
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-1">Email</label>
+                  <input 
+                    type="email" 
+                    className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                    required 
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-1">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary" 
+                    required 
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium mb-1">Preferred Contact Time</label>
+                  <select className="w-full px-3 py-2 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-primary">
+                    <option value="">Select time</option>
+                    <option value="morning">Morning (9 AM - 12 PM)</option>
+                    <option value="afternoon">Afternoon (12 PM - 5 PM)</option>
+                    <option value="evening">Evening (5 PM - 8 PM)</option>
+                  </select>
+                </div>
+                
+                <div className="space-y-2">
+                  <label className="flex items-center">
+                    <input type="checkbox" className="mr-2" />
+                    <span className="text-sm">I have a trade-in vehicle</span>
+                  </label>
+                  <label className="flex items-center">
+                    <input type="checkbox" className="mr-2" />
+                    <span className="text-sm">Pre-approve me for financing (soft credit check)</span>
+                  </label>
+                  <label className="flex items-center">
+                    <input type="checkbox" className="mr-2" required />
+                    <span className="text-sm">I agree to receive SMS updates about my reservation</span>
+                  </label>
+                </div>
+              </form>
+              
+              <div className="flex justify-end space-x-2 mt-6">
                 <Button variant="ghost" onClick={() => setShowLeadForm(false)}>
                   Cancel
                 </Button>
                 <Button variant="dealership">
-                  Reserve Bundle
+                  Reserve My Bundle
                 </Button>
               </div>
             </CardContent>
