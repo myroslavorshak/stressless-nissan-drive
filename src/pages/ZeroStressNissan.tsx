@@ -267,7 +267,7 @@ const ZeroStressNissan = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-background p-6 rounded-lg dealership-shadow hover-scale cursor-pointer">
+              <div key={index} className="bg-background p-6 rounded-lg dealership-shadow transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
                 <div className="text-primary mb-4">{benefit.icon}</div>
                 <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
                 <p className="text-muted-foreground">{benefit.description}</p>
