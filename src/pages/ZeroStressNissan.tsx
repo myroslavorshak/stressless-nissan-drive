@@ -324,6 +324,22 @@ const ZeroStressNissan = () => {
         </div>
       </section>
 
+      {/* CTA Section */}
+      <section className="py-component">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <Button 
+              variant="cta" 
+              size="xl" 
+              onClick={() => openLeadForm('CTA - Reserve My Bundle Now')}
+              className="animate-pulse"
+            >
+              RESERVE MY BUNDLE NOW
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Live Scarcity + Eligible VINs */}
       <section className="py-component bg-muted/50">
         <div className="container mx-auto px-4">
