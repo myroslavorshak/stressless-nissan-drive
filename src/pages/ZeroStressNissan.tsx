@@ -230,6 +230,53 @@ const ZeroStressNissan = () => {
         </div>
       </section>
 
+      {/* How It Works */}
+      <section className="py-section">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">How It Works</h2>
+            <p className="text-xl text-muted-foreground">Three simple steps to your new Nissan</p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {steps.map((step, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  {step.number}
+                </div>
+                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
+                <p className="text-muted-foreground">{step.description}</p>
+                {index === 1 && (
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Clock starts at check-in when VIN selected; stops at signed buyer's order
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Value Stack */}
+      <section className="py-section bg-muted/50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">6 Benefits Included at No Additional Charge</h2>
+            <p className="text-xl text-muted-foreground">Everything you need for zero-stress ownership</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-background p-6 rounded-lg dealership-shadow">
+                <div className="text-primary mb-4">{benefit.icon}</div>
+                <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
+                <p className="text-muted-foreground">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Live Scarcity + Eligible VINs */}
       <section className="py-component bg-muted/50">
         <div className="container mx-auto px-4">
@@ -287,53 +334,6 @@ const ZeroStressNissan = () => {
           <p className="text-center text-sm text-muted-foreground mt-6">
             VIN list updates in real time. When they're gone, they're gone.
           </p>
-        </div>
-      </section>
-
-      {/* How It Works */}
-      <section className="py-section">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-xl text-muted-foreground">Three simple steps to your new Nissan</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                  {step.number}
-                </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
-                {index === 1 && (
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Clock starts at check-in when VIN selected; stops at signed buyer's order
-                  </p>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Value Stack */}
-      <section className="py-section bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">6 Benefits Included at No Additional Charge</h2>
-            <p className="text-xl text-muted-foreground">Everything you need for zero-stress ownership</p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-background p-6 rounded-lg dealership-shadow">
-                <div className="text-primary mb-4">{benefit.icon}</div>
-                <h3 className="text-lg font-bold mb-2">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
