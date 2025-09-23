@@ -334,7 +334,7 @@ const ZeroStressNissan = () => {
               </h3>
               <p className="text-lg text-muted-foreground mb-6">
                 This exclusive Zero-Stress Bundle combines everything you need for worry-free ownership. 
-                With only {bundlesLeft} bundles remaining, this unique offer won't last long.
+                With only <span className="text-red-600 font-bold">{bundlesLeft} bundles</span> remaining, this unique offer won't last long.
               </p>
             </div>
             <Button 
