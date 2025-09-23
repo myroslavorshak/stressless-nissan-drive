@@ -22,6 +22,7 @@ const ZeroStressNissan = () => {
   const [availableVins, setAvailableVins] = useState<VehicleData[]>(vinData.filter(v => v.available));
   const [showLeadForm, setShowLeadForm] = useState(false);
   const [selectedVin, setSelectedVin] = useState<string>('');
+  const [formSource, setFormSource] = useState<string>('');
 
   const totalBundles = 25;
   const bundlesLeft = availableVins.length;
@@ -32,9 +33,16 @@ const ZeroStressNissan = () => {
 
   const handleVinReserve = (stockNumber: string) => {
     setSelectedVin(stockNumber);
+    setFormSource(`VIN Reservation - Stock #${stockNumber}`);
     setShowLeadForm(true);
     // Simulate VIN being reserved (client-side for demo)
     // In production, this would be an API call
+  };
+
+  const openLeadForm = (source: string) => {
+    setFormSource(source);
+    setSelectedVin('');
+    setShowLeadForm(true);
   };
 
   const benefits = [
@@ -153,7 +161,7 @@ const ZeroStressNissan = () => {
                 <span className="hidden sm:inline">Text Us</span>
               </a>
             </Button>
-            <Button variant="cta" size="sm" onClick={() => setShowLeadForm(true)}>
+            <Button variant="cta" size="sm" onClick={() => openLeadForm('Header CTA')}>
               Reserve Your VIN
             </Button>
           </div>
@@ -175,10 +183,10 @@ const ZeroStressNissan = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="cta" size="xl" onClick={() => setShowLeadForm(true)}>
+                <Button variant="cta" size="xl" onClick={() => openLeadForm('Hero - Reserve My Bundle Now')}>
                   RESERVE MY BUNDLE NOW
                 </Button>
-                <Button variant="dealershipOutline" size="xl" onClick={() => setShowLeadForm(true)}>
+                <Button variant="dealershipOutline" size="xl" onClick={() => openLeadForm('Hero - Book 60-Minute Sign-and-Drive')}>
                   Book 60-Minute Sign-and-Drive
                 </Button>
               </div>
@@ -444,7 +452,7 @@ const ZeroStressNissan = () => {
             <Phone className="w-4 h-4" />
           </a>
         </Button>
-        <Button variant="cta" onClick={() => setShowLeadForm(true)}>
+        <Button variant="cta" onClick={() => openLeadForm('Mobile CTA Bar')}>
           Reserve Your VIN
         </Button>
         <Button variant="ghost" size="sm" asChild>
@@ -465,6 +473,16 @@ const ZeroStressNissan = () => {
               </p>
               
               <form className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium mb-1">Subject</label>
+                  <input 
+                    type="text" 
+                    value={formSource}
+                    className="w-full px-3 py-2 border border-border rounded-md bg-muted text-muted-foreground" 
+                    readOnly 
+                  />
+                </div>
+                
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-1">First Name</label>
