@@ -5,6 +5,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import vinData from "../../data/eligible-vins.json";
 import heroImage from "@/assets/hero-delivery.jpg";
+import nissanSentraWhite from "@/assets/nissan-sentra-white.jpg";
+import nissanAltimaGray from "@/assets/nissan-altima-gray.jpg";
+import nissanRogueBlue from "@/assets/nissan-rogue-blue.jpg";
+import nissanMuranoBlack from "@/assets/nissan-murano-black.jpg";
+import nissanMaximaRed from "@/assets/nissan-maxima-red.jpg";
 
 interface VehicleData {
   id: string;
@@ -30,6 +35,33 @@ const ZeroStressNissan = () => {
 
   const dealerPhone = '(555) 123-4567';
   const dealerSMS = '5551234567';
+
+  // Function to get vehicle image based on model and color
+  const getVehicleImage = (model: string, color: string) => {
+    const modelLower = model.toLowerCase();
+    const colorLower = color.toLowerCase();
+    
+    if (modelLower.includes('sentra') && colorLower.includes('white')) {
+      return nissanSentraWhite;
+    } else if (modelLower.includes('altima') && colorLower.includes('gray')) {
+      return nissanAltimaGray;
+    } else if (modelLower.includes('rogue') && colorLower.includes('blue')) {
+      return nissanRogueBlue;
+    } else if (modelLower.includes('murano') && colorLower.includes('black')) {
+      return nissanMuranoBlack;
+    } else if (modelLower.includes('maxima') && colorLower.includes('red')) {
+      return nissanMaximaRed;
+    }
+    
+    // Default image based on model
+    if (modelLower.includes('sentra')) return nissanSentraWhite;
+    if (modelLower.includes('altima')) return nissanAltimaGray;
+    if (modelLower.includes('rogue')) return nissanRogueBlue;
+    if (modelLower.includes('murano')) return nissanMuranoBlack;
+    if (modelLower.includes('maxima')) return nissanMaximaRed;
+    
+    return nissanSentraWhite; // fallback
+  };
 
   const handleVinReserve = (stockNumber: string) => {
     setSelectedVin(stockNumber);
@@ -298,6 +330,13 @@ const ZeroStressNissan = () => {
               <Card key={vehicle.id} className="dealership-shadow hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
                   <div className="space-y-4">
+                    <div className="relative">
+                      <img 
+                        src={getVehicleImage(vehicle.model, vehicle.color)} 
+                        alt={`${vehicle.year} ${vehicle.model} ${vehicle.trim} in ${vehicle.color}`}
+                        className="w-full h-48 object-cover rounded-lg dealership-shadow"
+                      />
+                    </div>
                     <div>
                       <h3 className="text-lg font-bold">
                         {vehicle.year} {vehicle.model} {vehicle.trim}
