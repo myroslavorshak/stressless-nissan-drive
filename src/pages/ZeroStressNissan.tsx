@@ -278,7 +278,7 @@ const ZeroStressNissan = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             {steps.map((step, index) => (
-              <div key={index} className="text-center space-y-6">
+              <div key={index} className="text-center space-y-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl cursor-pointer">
                 <div className="relative">
                   <img 
                     src={step.image} 
