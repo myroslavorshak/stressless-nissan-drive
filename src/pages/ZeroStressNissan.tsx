@@ -181,7 +181,6 @@ const ZeroStressNissan = () => {
               alt="Old Orchard Nissan" 
               className="h-10 w-auto"
             />
-            <span className="font-bold text-lg">Old Orchard Nissan</span>
             {bundlesLeft > 0 && (
               <Badge variant="secondary" className="ml-4">
                 {bundlesLeft} bundles left
