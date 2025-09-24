@@ -13,6 +13,7 @@ import nissanMaximaRed from "@/assets/nissan-maxima-red.jpg";
 import stepReserveVin from "@/assets/step-reserve-vin.jpg";
 import stepSignAndDrive from "@/assets/step-sign-and-drive.jpg";
 import stepZeroStressOwnership from "@/assets/step-zero-stress-ownership.jpg";
+import oldOrchardNissanLogo from "@/assets/old-orchard-nissan-logo.png";
 
 interface VehicleData {
   id: string;
@@ -175,10 +176,12 @@ const ZeroStressNissan = () => {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">N</span>
-            </div>
-            <span className="font-bold text-lg">Nissan Dealer</span>
+            <img 
+              src={oldOrchardNissanLogo} 
+              alt="Old Orchard Nissan" 
+              className="h-10 w-auto"
+            />
+            <span className="font-bold text-lg">Old Orchard Nissan</span>
             {bundlesLeft > 0 && (
               <Badge variant="secondary" className="ml-4">
                 {bundlesLeft} bundles left
